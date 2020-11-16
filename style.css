@@ -1,0 +1,489 @@
+body{
+    background-color: #1d1d1d;
+    font-family: sans-serif;
+}
+.wrap{
+    width: 90vw;
+    min-width: 900px;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+a{
+    color: #23afd2;
+}
+a:hover{
+    text-shadow: 0 0 1px #17a0c4;
+}
+
+
+.gridTemplate4x4{
+    display: grid;
+    grid-template: repeat(4, 1fr)/repeat(4, 25%);
+}
+.gridTemplate3x4{
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(4, 25%);
+}
+
+.colorWhite{
+    color: #ffffff;
+}
+.colorRed{
+    color: #e84c3d;
+}
+
+
+.bgColorBlue{
+    background-color: #23afd2;
+}
+.bgColorRed{
+    background-color: #e84c3d;
+}
+.bgColorGrey{
+    background-color: #262626;
+}
+.bgColorBlack{
+    background-color: #000000;
+}
+.bgColorWhite{
+    background-color: #ffffff;
+}
+.bgColorLightGrey{
+    background-color: #f3f1f2;
+}
+
+
+.zIndex-1{
+    z-index: -1;
+}
+.zIndex-2{
+    z-index: -2;
+}
+.zIndex20{
+    z-index: 20;
+}
+.zIndex10{
+    z-index: 10;
+}
+.positionRelative{
+    position: relative;
+}
+.positionAbsolute{
+    position: absolute;
+}
+.positionBottom{
+    bottom: 0;
+}
+.positionCenter{
+    top: 25%;
+}
+
+
+.card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 10% 10%;
+}
+.socialCard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10% 2%;
+}
+.socialCard>p{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1em;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+
+
+header{
+    flex-basis: 55vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.navBar{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+nav{
+    margin-left: auto;
+    align-self: flex-end;
+    flex-basis: 57%;
+}
+.logo{
+    flex-basis: 30%;
+}
+.mainNav>li>a,
+.logo a{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #ffffff;
+}
+.logo a{
+    background-color: #e84c3d;
+    padding: 4% 0;
+    font-size: 1.1em;
+}
+.mainNav{
+    display: flex;
+}
+.mainNav>li{
+    flex-basis: 25%;
+}
+.mainNav>li>a{
+    background-color: #23afd2;
+    padding: 7% 0;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease 0.05s;
+}
+.mainNav>li>a:hover, 
+.mainNav>li>a.active,
+.learnMore:hover,
+.send:hover{
+    background-color: #17a0c4;
+}
+.headingFoto{
+    flex-grow: 1;
+    position: relative;
+}
+.headingImg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.headingDescription{
+    position: absolute;
+    width: 40%;
+    bottom: 0;
+    margin-left: 10%;
+    background-color: #e84c3d;
+}
+.headingDescription h2,
+.headingDescription p{
+    text-transform: uppercase;
+}
+.headingDescription h2{
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #ffffff;
+    margin: 5% 10% 1%;
+}
+.headingDescription p{
+    margin: 0% 10% 5%;
+}
+
+
+
+
+
+main{
+    flex-grow: 1;
+    width: 80%;
+    margin: 0 auto;
+}
+main>div{
+    transition: transform 0.2s ease-in-out 0.1s;
+}
+main>div:hover,
+.send:hover{
+    transform: scale(0.95);
+}
+main>div:hover .likesComments,
+main>div:hover .triangleRight,
+main>div:hover .triangleLeft,
+div.hover:hover~div>div.address{
+    visibility: visible;
+}
+main h3{
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+main p,
+main ul{
+    margin-bottom: 5%;
+}
+.descrition{
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    padding: 3%;
+    font-size: 0.8em;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.social{
+    align-self: flex-end;
+    font-size: 1.5em;
+    color: #cacaca;
+    margin-bottom: 10%;
+}
+.learnMore{
+    display: block;
+    color: #ffffff;
+    background-color: #23afd2;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5% 0;
+    width: 85%;
+    text-shadow: none;
+    box-shadow: 0px 1px 3px #000000;
+    transition: background-color 0.2s 
+    ease 0.05s;
+}
+.readMore{
+    display: block;
+    color: #ffffff;
+    background-color: #e84c3d;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5% 0;
+    width: 50%;
+    text-shadow: none;
+    box-shadow: 0px 1px 3px #000000;
+    transition: background-color 0.2s 
+    ease 0.05s;
+}
+.readMore:hover{
+    background-color: #bd2e21;
+}
+.redCheckCircle{
+    padding-left: 5%;
+}
+.redCheckCircle>li{
+    margin-bottom: 2%;
+}
+.redCheckCircle>li::before{
+    content: "\f058  ";
+    font-family: FontAwesome;
+    color: #e84c3d;
+}
+.chevronDown{
+    font-size: 1.5em;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.video>iframe{
+    width: 100%;
+}
+.likesComments{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #ffffff;
+    align-items: flex-end;
+    background-color: #26262652;
+    visibility: hidden;
+    transition: visibility 0.3s ease-in-out 0.2s;
+}
+.likesComments>p{
+    margin: 0;
+    padding: 1% 2%; 
+}
+.likesComments>p:last-of-type{
+    margin-left: auto;
+}
+.triangleRight{
+    top: 38%;
+    left: 90%;
+}
+.triangleLeft{
+    top: 38%;
+    right: 90%;
+}
+.triangleRight,
+.triangleLeft{
+    border: 15px solid #ffffff;
+    transform: rotateZ(45deg);
+    visibility: hidden;
+    transition: visibility 0.1s ease-in-out 0.1s;
+}
+.map{
+    width: 100%;
+    height: 75vh;
+}
+.map>iframe{
+    width: 100%;
+    height: 100%;
+}
+.address{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 7%;
+    background-color: #17a0c454; 
+    visibility: hidden;
+    transition: visibility 0.1s ease-in-out 0.1s;
+}
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.contactForm{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+.contactForm input,
+.contactForm textarea{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background: none;
+    outline: 1px solid #ffffff;
+    padding: 2%;
+}
+.contactForm input::placeholder,
+.contactForm textarea::placeholder{
+    text-transform: uppercase;
+}
+.contactForm textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 3.5em;
+}
+.send{
+    color: #ffffff;
+    background-color: #23afd2;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3% 0;
+    text-shadow: none;
+    border: none;
+    box-shadow: 0px 1px 3px #000000;
+    transition: all 0.2s 
+    ease 0.05s;
+}
+
+
+
+footer{
+    flex-basis: 12vh;
+    display: flex;
+}
+.copy{
+    align-self: center;
+    flex-basis: 50%;
+}
+.copy p{
+    color: #ffffff;
+    text-align: right;
+    font-size: 0.9em;
+    padding-right: 10%;
+}
+.tagline{
+    flex-basis: 50%;
+    background-color: #23afd2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+.tagline h3{
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+.tagline p{
+    font-size: 0.9em;
+}
+.tagline h3,
+.tagline p{
+    margin-left: 5%;
+}
+
+@media (max-width: 575px) { 
+    .wrap{
+        width: 100%;
+        min-width: 414px;
+        max-width: 575px;
+    }
+    header{
+        flex-basis: 80vh;
+        
+    }
+    .navBar{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .mainNav{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .mainNav>li>a{
+        padding: 1% 0;
+    }
+    nav{
+        margin-left: 0;
+        align-self: stretch;
+        flex-basis: auto;
+    }
+    .headingDescription{
+        width: 85%;
+        margin-left: 0;
+    }
+    main{
+        width: 100%;
+    }
+    footer{
+        height: 30vh;
+        flex-flow: column nowrap;
+    }
+    .copy p{
+        text-align: center;
+        font-size: 0.9em;
+        padding-right: 0;
+    }
+    .copy{
+        order: 2;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    .tagline{
+        text-align: center;
+    }
+    .gridTemplate4x4{
+        display: grid;
+        grid-template: repeat(8, 1fr)/repeat(2, 50%);
+    }
+    .gridTemplate3x4{
+        display: grid;
+        grid-template: repeat(6, 1fr)/repeat(2, 50%);
+    }
+}
